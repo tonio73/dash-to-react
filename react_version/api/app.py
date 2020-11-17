@@ -1,10 +1,15 @@
+"""
+    API server for the React version fo the dashboard to show inference results of YAMNet
+"""
+
+from pathlib import Path
+import os
 from yamnet_wrap import YamnetWrap
 from yamnet_wrap.samples import samples
 
 from flask import Flask, request, jsonify
 import librosa
-from pathlib import Path
-import os
+
 
 own_path = Path(os.path.abspath(os.path.dirname(__file__)))
 # Local path to the samples
@@ -15,11 +20,15 @@ app = Flask(__name__)
 
 @app.route('/api/samples', methods=['GET'])
 def get_sample_list():
+    """ Get the list of available sample sound files """
     return jsonify(samples)
 
 
 @app.route('/api/infer', methods=['GET'])
 def inference():
+    """ Perform inference for selected file using YAMNet model
+        The file is passed as URL argument 'file'
+    """
     file_name = request.args.get('file')
 
     if file_name not in map(lambda s: s['file'], samples):

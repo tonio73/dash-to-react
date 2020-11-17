@@ -1,3 +1,10 @@
+"""
+    Dash implementation of the dashboard showing YAMNet inference results
+"""
+
+from pathlib import Path
+import os
+
 from yamnet_wrap import YamnetWrap
 from yamnet_wrap.samples import samples
 
@@ -10,8 +17,6 @@ import dash_bootstrap_components as dbc
 import plotly.graph_objects as go
 import numpy as np
 import librosa
-from pathlib import Path
-import os
 
 own_path = Path(os.path.abspath(os.path.dirname(__file__)))
 data_path = Path('assets/samples')
@@ -59,7 +64,7 @@ def select_audio(file_name):
               [Input('select-file', 'value')])
 def show_graphs(file_name):
     """ Hide the plots when no file is selected """
-    return (file_name is None or file_name == '')
+    return file_name is None or file_name == ''
 
 
 @app.callback([Output('subtitle', 'children'),
