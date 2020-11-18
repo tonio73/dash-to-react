@@ -4,6 +4,9 @@ This repository is showing a side by side example of implementing a dashboard wi
 The test application is exposing a deep-learning model to perform inference on audio files. 
 The selected model is [YAMNet](https://github.com/tensorflow/models/tree/master/research/audioset/yamnet), an audio classifier based on Mobilenet and trained on [AudioSet](https://research.google.com/audioset/), a 2 million dataset of 10s audio samples. 
 
+This repository is the basis to a tutorial article posted on Medium:
+ ["Plotly Dash or React.js + Plotly.js"](https://towardsdatascience.com/plotly-dash-or-react-js-plotly-js-b491b3615512)
+
 ## Content
 
 - `dash_version/`: a Python application based on Plotly Dash and served by Flask development server
