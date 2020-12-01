@@ -1,11 +1,11 @@
-# Plotly Dash to React
+# Plotly Dash or React.js + Plotly.js? A side by side comparison
 
 This repository is showing a side by side example of implementing a dashboard with Plotly Dash or with React and React-Plotly. 
 The test application is exposing a deep-learning model to perform inference on audio files. 
 The selected model is [YAMNet](https://github.com/tensorflow/models/tree/master/research/audioset/yamnet), an audio classifier based on Mobilenet and trained on [AudioSet](https://research.google.com/audioset/), a 2 million dataset of 10s audio samples. 
 
-This repository is the basis to a tutorial article posted on Medium:
- ["Plotly Dash or React.js + Plotly.js"](https://towardsdatascience.com/plotly-dash-or-react-js-plotly-js-b491b3615512)
+**This repository is the basis to a tutorial article posted on Medium:**
+ **["Plotly Dash or React.js + Plotly.js? A side by side comparison"](https://towardsdatascience.com/plotly-dash-or-react-js-plotly-js-b491b3615512)**
 
 ## Content
 
